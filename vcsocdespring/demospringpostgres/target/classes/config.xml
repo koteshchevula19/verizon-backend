@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+   
+    
+   <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+	<property name="driverClassName" value=" org.postgresql.Driver"></property>
+	<property name="url" value="jdbc:postgresql://localhost:5432/employee"></property>
+	<property name="username" value="postgres"></property>
+	<property name="password" value="April@2304"></property>
+	</bean>
+   
+
+    
+    <!-- For annotations to work -->
+    <context:annotation-config></context:annotation-config>
+    
+    <!-- For Components to be scannable -->
+    <context:component-scan base-package="com.example.vscodepostgres"></context:component-scan>
+    
+    
+    </beans>
